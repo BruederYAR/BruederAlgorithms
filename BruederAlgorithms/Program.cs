@@ -9,7 +9,7 @@ namespace BruederAlgorithms
     {
         static void Main(string[] args)
         {
-            BinarySearch<int> Sort = new BinarySearch<int>();
+            InterpolationSearch<int> Sort = new InterpolationSearch<int>();
 
             for (int i = 0; i < 100; i++)
             {

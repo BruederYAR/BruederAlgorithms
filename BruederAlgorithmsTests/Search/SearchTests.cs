@@ -26,7 +26,7 @@ namespace BruederAlgorithmsTests.Search
             LinearSearch<int> linearSearch = new LinearSearch<int>();
 
 
-            for(int i = 0; i < 100; i++)
+            for (int i = 0; i < 100; i++)
             {
                 FillRandom();
                 linearSearch.Items.Clear();
@@ -36,7 +36,7 @@ namespace BruederAlgorithmsTests.Search
         }
 
         [TestMethod]
-        public void BinarySearch()
+        public void BinarySearchTest()
         {
             BinarySearch<int> binarySearch = new BinarySearch<int>();
 
@@ -51,6 +51,33 @@ namespace BruederAlgorithmsTests.Search
                 int standart = this.Items.BinarySearch(this.SearchItem) < -1 ? -1 : this.Items.BinarySearch(this.SearchItem);
                 Assert.AreEqual(standart, binarySearch.ToFind(this.SearchItem));
             }
+        }
+
+        [TestMethod]
+        public void InterpolationSearchTest()
+        {
+            InterpolationSearch<int> interpolationSearch = new InterpolationSearch<int>();
+
+            for (int i = 0; i < 100; i++)
+            {
+                FillRandom();
+                this.Items.Sort();
+
+                interpolationSearch.Items.Clear();
+                interpolationSearch.Items.AddRange(this.Items);
+
+                if (this.Items.IndexOf(this.SearchItem) != -1 && interpolationSearch.ToFind(this.SearchItem) != -1)
+                    Assert.AreEqual(this.Items[this.Items.IndexOf(this.SearchItem)], this.Items[interpolationSearch.ToFind(this.SearchItem)]);
+                else
+                    if (interpolationSearch.ToFind(this.SearchItem) == -1 && this.Items.IndexOf(this.SearchItem) != -1)
+                    Assert.IsTrue(false);
+                else if (interpolationSearch.ToFind(this.SearchItem) != -1 && this.Items.IndexOf(this.SearchItem) == -1)
+                    Assert.IsTrue(false);
+                else if (interpolationSearch.ToFind(this.SearchItem) != -1 && this.Items.IndexOf(this.SearchItem) != -1)
+                    Assert.IsTrue(true);
+                    
+            }
+            
         }
 
 
