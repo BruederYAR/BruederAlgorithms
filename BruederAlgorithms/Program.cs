@@ -9,18 +9,21 @@ namespace BruederAlgorithms
     {
         static void Main(string[] args)
         {
-            LinearSearch<int> mergeSort = new LinearSearch<int>();
+            BinarySearch<int> Sort = new BinarySearch<int>();
 
             for (int i = 0; i < 100; i++)
             {
                 Random random = new Random();
-                mergeSort.Items.Add(random.Next(0, 100));
+                Sort.Items.Add(random.Next(0, 100));
             }
 
-            mergeSort.PrintItems(10);
+            Sort.Items.Sort();
+            Sort.PrintItems(10);
+
             Console.WriteLine();
-            Console.WriteLine(mergeSort.ToFind(6));
-            Console.WriteLine(mergeSort.Items.IndexOf(6));
+            Console.WriteLine(Sort.ToFind(6));
+            Console.WriteLine(Sort.Items.BinarySearch(6));
+
 
         }
     }

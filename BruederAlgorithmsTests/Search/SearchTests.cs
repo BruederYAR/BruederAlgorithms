@@ -35,6 +35,25 @@ namespace BruederAlgorithmsTests.Search
             }
         }
 
+        [TestMethod]
+        public void BinarySearch()
+        {
+            BinarySearch<int> binarySearch = new BinarySearch<int>();
+
+            for (int i = 0; i < 100; i++)
+            {
+                FillRandom();
+                Items.Sort();
+
+                binarySearch.Items.Clear();
+                binarySearch.Items.AddRange(this.Items);
+
+                int standart = this.Items.BinarySearch(this.SearchItem) < -1 ? -1 : this.Items.BinarySearch(this.SearchItem);
+                Assert.AreEqual(standart, binarySearch.ToFind(this.SearchItem));
+            }
+        }
+
+
         private void FillRandom()
         {
             Items.Clear();

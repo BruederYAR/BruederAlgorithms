@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using System.Text;
 
 namespace BruederAlgorithms.Search
@@ -30,5 +31,14 @@ namespace BruederAlgorithms.Search
                 a++;
             }
         }
+
+        static SearchBase()
+        {
+            ParameterExpression paramOne = Expression.Parameter(typeof(T), "one");
+            ParameterExpression paramTwo = Expression.Parameter(typeof(T), "two");
+
+            greaterThan = (Func<T, T, bool>)Expression.Lambda(Expression.GreaterThan(paramOne, paramTwo), paramOne, paramTwo).Compile();
+        }
+        public static readonly Func<T, T, bool> greaterThan;
     }
 }

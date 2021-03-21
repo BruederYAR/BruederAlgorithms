@@ -11,6 +11,11 @@ namespace BruederAlgorithms.Search
 
         public override int ToFind(T item)
         {
+            return Search(item);
+        }
+
+        private int Search(T item)
+        {
             int index = -1;
             for (int i = 0; i < this.Items.Count; i++)
             {
@@ -22,7 +27,6 @@ namespace BruederAlgorithms.Search
             }
             return index;
         }
-
 
     }
 }
