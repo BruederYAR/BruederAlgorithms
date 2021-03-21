@@ -13,7 +13,6 @@ namespace BruederAlgorithms.Search
         public override int ToFind(T item)
         {
             Items.Sort();
-
             return Search(item, 0, Items.Count);
 
         }

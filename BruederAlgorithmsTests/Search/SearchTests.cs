@@ -17,7 +17,7 @@ namespace BruederAlgorithmsTests.Search
         public void Init()
         {
             FillRandom();
-            SearchItem = 10;
+            SearchItem = 99;
         }
 
         [TestMethod]
@@ -76,8 +76,32 @@ namespace BruederAlgorithmsTests.Search
                 else if (interpolationSearch.ToFind(this.SearchItem) != -1 && this.Items.IndexOf(this.SearchItem) != -1)
                     Assert.IsTrue(true);
                     
+            }   
+        }
+
+        [TestMethod]
+        public void FibonacciSearchTest()
+        {
+            FibonacciSearch<int> fibonacciSearch = new FibonacciSearch<int>();
+
+            for(int i = 0; i < 100; i++)
+            {
+                FillRandom();
+                this.Items.Sort();
+
+                fibonacciSearch.Items.Clear();
+                fibonacciSearch.Items.AddRange(this.Items);
+
+                if (this.Items.IndexOf(this.SearchItem) != -1 && fibonacciSearch.ToFind(this.SearchItem) != -1)
+                    Assert.AreEqual(this.Items[this.Items.IndexOf(this.SearchItem)], this.Items[fibonacciSearch.ToFind(this.SearchItem)]);
+                else
+                    if (fibonacciSearch.ToFind(this.SearchItem) == -1 && this.Items.IndexOf(this.SearchItem) != -1)
+                        Assert.IsTrue(false);
+                    else if (fibonacciSearch.ToFind(this.SearchItem) != -1 && this.Items.IndexOf(this.SearchItem) == -1)
+                        Assert.IsTrue(false);
+                    else if (fibonacciSearch.ToFind(this.SearchItem) != -1 && this.Items.IndexOf(this.SearchItem) != -1)
+                        Assert.IsTrue(true);
             }
-            
         }
 
 

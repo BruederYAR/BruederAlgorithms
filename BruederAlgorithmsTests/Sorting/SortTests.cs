@@ -37,11 +37,25 @@ namespace BruederAlgorithms.Sorting.Tests
 
             //act
             merge.MakeSort();
-
+            
             //assert
             for (int i = 0; i < Items.Count; i++)
             {
                 Assert.AreEqual(SortedItems[i], merge.Items[i]);
+            }
+        }
+
+        [TestMethod]
+        public void HeapSortTest()
+        {
+            HeapSort<int> heapSort = new HeapSort<int>();
+            heapSort.Items.AddRange(Items);
+
+            heapSort.MakeSort();
+
+            for(int i = 0; i < 100; i++)
+            {
+                Assert.AreEqual(SortedItems[i], heapSort.Items[i]);
             }
         }
 
