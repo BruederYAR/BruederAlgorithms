@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BruederAlgorithms.Sorting
 {
-    public class MergeSort<T> : AlgorithmBase<T> where T : IComparable 
+    public class MergeSort<T> : SortBase<T> where T : IComparable 
     {
         public MergeSort(IEnumerable<T> Items) : base(Items) { }
         public MergeSort() { }

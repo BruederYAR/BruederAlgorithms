@@ -4,11 +4,11 @@ using System.Text;
 
 namespace BruederAlgorithms
 {
-    public class AlgorithmBase<T> where T: IComparable
+    public class SortBase<T> where T: IComparable
     {
 
-        public AlgorithmBase(IEnumerable<T> Items) { this.Items.AddRange(Items); }
-        public AlgorithmBase() { }
+        public SortBase(IEnumerable<T> Items) { this.Items.AddRange(Items); }
+        public SortBase() { }
 
         public List<T> Items { get; set; } = new List<T>();
 
@@ -39,15 +39,8 @@ namespace BruederAlgorithms
                     a = 0;
                 }
                 a++;
-            }
-             
+            }   
         }
 
-        //public void FillRandom(int count, int max = 100)
-        //{
-        //    Random random = new Random();
-        //    for (int i = 0; i < count; i++)
-        //        Items.Add(random.Next(0, max));
-        //}
     }
 }
