@@ -18,7 +18,7 @@ namespace BruederAlgorithms.Search
         }
 
         public void PrintItems(int tab = 1)
-        {
+        { 
             int a = 0;
             for (int i = 0; i < this.Items.Count; i++)
             {
