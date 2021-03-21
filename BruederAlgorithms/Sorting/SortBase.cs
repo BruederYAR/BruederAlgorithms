@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BruederAlgorithms
 {
-    public class SortBase<T> where T: IComparable
+    public class SortBase<T> where  T: IComparable
     {
 
         public SortBase(IEnumerable<T> Items) { this.Items.AddRange(Items); }
