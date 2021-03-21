@@ -15,28 +15,28 @@ namespace BruederAlgorithms.Sorting
             Items = Sort(Items);
         }
       
-        private void Hiapify(List<T> arr, int n, int i)
+        private void Hiapify(List<T> items, int n, int i)
         {
             int largest = i; // Инициализируем наибольший элемент как корень
-            int l = 2 * i + 1; // Левый эллемент
-            int r = 2 * i + 2; // Правый эллемент
+            int left = 2 * i + 1; // Левый эллемент
+            int right = 2 * i + 2; // Правый эллемент
 
-            if (l < n && Compare(arr[largest], arr[l])==-1) // Если левый дочерний элемент больше корня и индекс левого элемента не больше максимального индекса
-                largest = l;
+            if (left < n && Compare(items[largest], items[left])==-1) // Если левый дочерний элемент больше корня и индекс левого элемента не больше максимального индекса
+                largest = left;
 
             // Если правый дочерний элемент больше, чем самый большой элемент на данный момент
-            if (r < n && Compare(arr[largest], arr[r])==-1)
-                largest = r;
+            if (right < n && Compare(items[largest], items[right])==-1)
+                largest = right;
 
             // Если самый большой элемент не корень
             if (largest != i)
             {
-                T swap = arr[i];
-                arr[i] = arr[largest];
-                arr[largest] = swap;
+                T swap = items[i];
+                items[i] = items[largest];
+                items[largest] = swap;
 
                 // Рекурсивно преобразуем в двоичную кучу затронутое поддерево
-                Hiapify(arr, n, largest);
+                Hiapify(items, n, largest);
             }
         }
        
