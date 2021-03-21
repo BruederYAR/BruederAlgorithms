@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BruederAlgorithms", "BruederAlgorithms.csproj", "{71EBDDF7-C847-4584-B36E-6B052D78379E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BruederAlgorithmsTests", "..\BruederAlgorithmsTests\BruederAlgorithmsTests.csproj", "{CF2850BA-A564-4302-BFE5-F2448F939005}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{71EBDDF7-C847-4584-B36E-6B052D78379E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71EBDDF7-C847-4584-B36E-6B052D78379E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71EBDDF7-C847-4584-B36E-6B052D78379E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71EBDDF7-C847-4584-B36E-6B052D78379E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF2850BA-A564-4302-BFE5-F2448F939005}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF2850BA-A564-4302-BFE5-F2448F939005}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF2850BA-A564-4302-BFE5-F2448F939005}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF2850BA-A564-4302-BFE5-F2448F939005}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {28015708-C5A5-4174-B173-FAA2D180F795}
+	EndGlobalSection
+EndGlobal
