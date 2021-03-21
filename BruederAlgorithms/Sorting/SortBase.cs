@@ -35,7 +35,7 @@ namespace BruederAlgorithms
                 Console.Write($"{this.Items[i]} ");
                 if(a >= tab)
                 {
-                    Console.WriteLine();
+                   // Console.WriteLine();
                     a = 0;
                 }
                 a++;
