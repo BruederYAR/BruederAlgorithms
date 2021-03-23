@@ -45,5 +45,15 @@ namespace BruederAlgorithmsTests
             Assert.AreEqual(Value.IndexOf(this.SubValue), kMPSearch.ToFind());
         }
 
+        [TestMethod]
+        public void BMSearchSubStringTest()
+        {
+            BMSearchSubString bMSearch = new BMSearchSubString();
+
+            bMSearch.Value = this.Value;
+            bMSearch.SubValue = this.SubValue;
+
+            Assert.AreEqual(Value.IndexOf(this.SubValue), bMSearch.ToFind());
+        }
     }
 }
