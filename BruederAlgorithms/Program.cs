@@ -24,8 +24,6 @@ namespace BruederAlgorithms
             Console.WriteLine(linearSearch.ToFind());
 
 
-
-
             //List<int> list = new List<int>();
             //for(int i = 0; i < 100; i++)
             //{
