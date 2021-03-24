@@ -11,17 +11,29 @@ namespace BruederAlgorithms
     {
         static void Main(string[] args)
         {
-
-            LinearSearchSubSring linearSearch = new LinearSearchSubSring()
+            List<int> list = new List<int>();
+            for (int i = 0; i < 100; i++)
             {
-                Value = "Forget minutes. It's just 17 seconds. My answer just above is my 2nd high-est voted answer on the site." +
-                " In fact I'm here now because someone just voted it again, almost 10 years later." +
-                " And the two answers aren't really any different... but mine was posted 17 seconds faster," +
-                " and that's meant a 500 vote difference",
-                SubValue = "really",
-            };
+                list.Add(new Random().Next(50));
+            }
+            list.Sort();
+            BinarySearch<int> binarySearch = new BinarySearch<int>(list);
+            binarySearch.PrintItems(10);
+            Console.WriteLine("!!");
 
-            Console.WriteLine(linearSearch.ToFind());
+            Console.WriteLine(binarySearch.ToFind(15));
+           var a = list.IndexOf(15);
+
+            //LinearSearchSubSring linearSearch = new LinearSearchSubSring()
+            //{
+            //    Value = "Forget minutes. It's just 17 seconds. My answer just above is my 2nd high-est voted answer on the site." +
+            //    " In fact I'm here now because someone just voted it again, almost 10 years later." +
+            //    " And the two answers aren't really any different... but mine was posted 17 seconds faster," +
+            //    " and that's meant a 500 vote difference",
+            //    SubValue = "really",
+            //};
+
+            //Console.WriteLine(linearSearch.ToFind());
 
 
             //List<int> list = new List<int>();
