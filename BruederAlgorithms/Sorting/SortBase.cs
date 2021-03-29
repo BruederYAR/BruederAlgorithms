@@ -27,20 +27,7 @@ namespace BruederAlgorithms
             return a.CompareTo(b);
         }
 
-        public void PrintItems(int tab = 1) 
-        {
-            int a = 0;
-            for (int i = 0; i < this.Items.Count; i++)
-            {
-                Console.Write($"{this.Items[i]} ");
-                if(a >= tab)
-                {
-                   // Console.WriteLine();
-                    a = 0;
-                }
-                a++;
-            }   
-        }
+
 
     }
 }
