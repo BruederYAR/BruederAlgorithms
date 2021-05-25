@@ -2,8 +2,11 @@
 using BruederAlgorithms.Search;
 using BruederAlgorithms.Hashing;
 using BruederAlgorithms.SearchSubString;
+using BruederAlgorithms.GraphicalRecursion;
+
 using System;
 using System.Collections.Generic;
+
 
 namespace BruederAlgorithms
 {
@@ -11,6 +14,10 @@ namespace BruederAlgorithms
     {
         static void Main(string[] args)
         {
+            GraphicalAlghoritms graphical = new GraphicalAlghoritms(1000, 1000);
+            graphical.DrawRectangleWrapping(graphical.Wight / 2 - 50, graphical.Height / 2 - 50, graphical.DrawRectangleAlghoritm);
+            graphical.Save();
+
             List<int> list = new List<int>(); //Список с рандомными значениями
             FillRandomList(ref list);
             list.Sort();
